@@ -1,0 +1,278 @@
+/*
+    Theme Name: Gym Fitness
+    Theme URI:
+    Author: Zahra Jana Behfarshad
+    Author URI: github.com/zbehfarshad
+    Description: Theme designed for gym
+    Version: 1.0.1
+    Tags: Responsive, Flexbox ready, mobile first, gym theme
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: gymfitness
+*/
+
+:root {
+    /* Fonts */
+    --mainFont: "Staatliches", cursive;
+    --textFont: "Open Sans", sans-serif;
+    --secondaryFont: "Raleway", sans-serif;
+    /* Colors */
+    --primary: #ff5b00;
+    --darkGray: #2f2e2e;
+    --lightGray: #ebebeb;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+html {
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    box-sizing: border-box;
+    /* Now 10px = 1rem */
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/** Headings **/
+
+h1,
+h2,
+h3 {
+    font-family: var(--mainFont);
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 3.6rem;
+}
+
+
+/** Globals **/
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    /** Max width of 1200px **/
+    max-width: 120rem;
+    /* For mobile devices*/
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/** Header **/
+
+.site-header {
+    background-color: var(--darkGray);
+    padding: 2rem 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width: 768px) {
+    .navigation-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/** Menus **/
+
+.main-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .main-menu {
+        display: flex;
+    }
+    .main-menu .menu {
+        display: flex;
+        align-items: center;
+    }
+    .main-menu li {
+        margin-right: 2rem;
+        padding: 0.5rem 2rem;
+    }
+    .main-menu li:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.main-menu a {
+    color: var(--white);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-family: var(--mainFont);
+}
+
+.current_page_item {
+    border-bottom: 3px solid var(--primary);
+}
+
+
+/** Footer **/
+
+.site-footer {
+    border-top: 2px solid var(--lightGray);
+    padding: 2rem 0;
+}
+
+.footer-menu .menu {
+    display: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: var(--mainFont);
+}
+
+@media (min-width: 768px) {
+    .footer-menu .menu {
+        display: flex;
+    }
+    .footer-menu .menu li {
+        margin-right: 2rem;
+    }
+    .footer-menu .menu li:last-of-type {
+        margin-right: 0;
+    }
+    .footer-menu .menu a {
+        color: var(--black);
+        font-size: 2rem;
+        font-family: var(--mainFont);
+    }
+    .footer-menu .current_page_item {
+        border-bottom: none;
+    }
+}
+
+.footer-content .copyright {
+    text-align: center;
+    flex: 1;
+    margin: 0;
+}
+
+@media (min-width: 786px) {
+    .footer-content .copyright {
+        flex: 0 0 auto;
+    }
+}
+
+
+/** Mobile Menu **/
+
+.slicknav_menu {
+    background-color: var(--darkGray);
+}
+
+.slicknav_btn {
+    background-color: var(--primary);
+}
+
+.slicknav_nav li {
+    text-align: center;
+    font-family: var(--mainFont);
+    font-size: 1.8rem;
+}
+
+.slicknav_nav .current-menu-item {
+    border: 0;
+}
+
+.slicknav_nav a:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .slicknav_btn {
+        display: none;
+    }
+}
+
+
+/** Utilities **/
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+
+/** Page Template **/
+
+.page h1 {
+    margin-bottom: 3rem;
+}
+
+.featured-image {
+    margin-bottom: 1rem;
+}
+
+.page.no-sidebar {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+
+/** Page with Sidebar Template **/
+
+@media (min-width: 768px) {
+    .page.with-sidebar {
+        display: flex;
+    }
+    .page.page-content {
+        flex: 0 0 calc(60% - 2rem);
+    }
+    .sidebar {
+        flex: 0 0 calc(40% - 2rem);
+    }
+}

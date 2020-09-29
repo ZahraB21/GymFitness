@@ -40,7 +40,7 @@ function gymfitness_scripts()
 }
 
 // Hook the scripts 
-add_action('init', 'gymfitness_scripts');
+add_action('wp_enqueue_scripts', 'gymfitness_scripts');
 
 // Support basic setup features
 function gymfitness_setup()

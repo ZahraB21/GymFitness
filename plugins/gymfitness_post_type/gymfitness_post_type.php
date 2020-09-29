@@ -62,8 +62,9 @@ function gymfitness_classes_post_type()
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type('gymfitness_Classes', $args);
+	register_post_type('gymfitness_classes', $args);
 }
+
 add_action('init', 'gymfitness_classes_post_type', 0);
 
 

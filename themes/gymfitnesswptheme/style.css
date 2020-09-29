@@ -106,7 +106,7 @@ img {
     justify-content: center;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .navigation-bar {
         display: flex;
         justify-content: space-between;
@@ -271,6 +271,9 @@ img {
     }
     .page.page-content {
         flex: 0 0 calc(60% - 2rem);
+    }
+    aside {
+        padding: 2rem;
     }
     .sidebar {
         flex: 0 0 calc(40% - 2rem);

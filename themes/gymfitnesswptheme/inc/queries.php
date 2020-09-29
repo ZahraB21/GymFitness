@@ -15,6 +15,14 @@ function gymfitness_classes_list()
             <a href="<?php the_permalink(); ?>">
                 <h3><?php the_title(); ?></h3>
             </a>
+            <p>
+                <?php the_field('class_days');
+                        $start_time = get_field('start_time');
+                        $end_time = get_field('end_time');
+                        echo " - $start_time to $end_time";
+                        ?>
+            </p>
+
         </div>
     </li>
     <?php endwhile; ?>

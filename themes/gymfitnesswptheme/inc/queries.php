@@ -9,7 +9,14 @@ function gymfitness_classes_list()
 ?>
 <ul class="classes-list">
     <?php while ($classes->have_posts()) : $classes->the_post(); ?>
-    <li><?php the_title(); ?></li>
+    <li class="gym-class card gradient">
+        <?php the_post_thumbnail('mediumSize'); ?>
+        <div class="card-content">
+            <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+            </a>
+        </div>
+    </li>
     <?php endwhile; ?>
 </ul>
 <?php }

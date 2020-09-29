@@ -45,7 +45,7 @@ function gymfitness_classes_post_type()
 	);
 	$args = array(
 		'label'                 => __('Class', 'gymfitness'),
-		'description'           => __('Classes para el Sitio Web', 'gymfitness'),
+		'description'           => __('Classes for this Website', 'gymfitness'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail'),
 		'hierarchical'          => true, // true = posts , false = paginas

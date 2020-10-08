@@ -70,6 +70,7 @@ function gymfitness_sidebars()
         'after_title' => '</h3>',
     ));
 
+    // If we have more than 1 sidebar, we must register it
     // register_sidebar(array(
     //     'name'  => 'Sidebars',
     //     'id' => 'sidebar2',
